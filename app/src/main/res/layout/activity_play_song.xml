@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_gorund_white"
+    android:paddingStart="@dimen/Activity_padding_left_right"
+    android:paddingTop="@dimen/Activity_padding_top"
+    android:paddingEnd="@dimen/Activity_padding_left_right"
+    tools:context=".ui.PlaySong">
+
+    <ImageView
+        android:id="@+id/back_botton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_back_"
+        android:padding="@dimen/H2_padding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/image_song"
+        android:layout_width="@dimen/image_song_size"
+        android:layout_height="@dimen/image_song_size"
+        android:src="@drawable/music"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/back_botton"
+        app:layout_constraintBottom_toTopOf="@id/song_name_txt"/>
+
+    
+    <TextView
+        android:id="@+id/song_name_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/image_song"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/seek_bar"
+        android:textSize="@dimen/H2_text_size"
+        android:text="song name"
+        />
+
+    <SeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/pause_play"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/song_name_txt"/>
+
+    <TextView
+        android:id="@+id/current_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/seek_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="0:0"/>
+
+    <TextView
+        android:id="@+id/total_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/seek_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="0:0"/>
+
+
+    <ImageView
+        android:id="@+id/previous_song"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/skip_previous_"
+        android:background="@drawable/music_icons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/pause_play"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@id/seek_bar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/pause_play"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/pause_song_"
+        android:background="@drawable/play_pause_icon"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/next_song"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@id/seek_bar"
+        app:layout_constraintStart_toEndOf="@+id/previous_song" />
+
+    <ImageView
+        android:id="@+id/next_song"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/skip_next_"
+        android:background="@drawable/music_icons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@id/seek_bar"
+        app:layout_constraintStart_toEndOf="@+id/pause_play" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

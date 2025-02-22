@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="Activity_padding_top">25dp</dimen>
+    <dimen name="H1_Text_Size">29sp</dimen>
+    <dimen name="Activity_padding_left_right">5dp</dimen>
+    <dimen name="H2_text_size">23sp</dimen>
+    <dimen name="H3_text_size">17sp</dimen>
+    <dimen name="H2_padding">16dp</dimen>
+    <dimen name="song_item_border">10dp</dimen>
+    <dimen name="image_song_size">200dp</dimen>
+</resources>
