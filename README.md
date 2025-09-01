@@ -1,4 +1,4 @@
-Sample MVVM offline music player application for Android that uses Kotlin programming language.
+Sample offline music player application for Android that uses Kotlin programming language.
 using Android’s MediaStore, which maintains an indexed database of all media files on the device, to get all music files (.mp3) in the external storage.
 
 the demo:
